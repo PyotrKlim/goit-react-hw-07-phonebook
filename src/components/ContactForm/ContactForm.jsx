@@ -4,7 +4,7 @@ import { nanoid } from '@reduxjs/toolkit';
 import { useContacts } from 'redux/useContacts';
 
 export default function ContactForm() {
-  const { contacts, addContact } = useContacts();
+  const { contacts, applyAddContact } = useContacts();
 
   const [name, setName] = useState('');
   const [number, setNumber] = useState('');
@@ -36,7 +36,7 @@ export default function ContactForm() {
       return;
     }
     const newContact = { name, number, id: nanoid() };
-    addContact(newContact);
+    applyAddContact(newContact);
     reset();
   };
 
