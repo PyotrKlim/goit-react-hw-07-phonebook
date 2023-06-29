@@ -2,9 +2,9 @@ import { useState } from 'react';
 import css from './ContactForm.module.css';
 import { nanoid } from '@reduxjs/toolkit';
 import { useContacts } from 'redux/useContacts';
-// проверка повторного пуша комита
+
 export default function ContactForm() {
-  const { contacts, applyAddContact } = useContacts();
+  const { contacts, addContact } = useContacts();
 
   const [name, setName] = useState('');
   const [number, setNumber] = useState('');
@@ -36,7 +36,7 @@ export default function ContactForm() {
       return;
     }
     const newContact = { name, number, id: nanoid() };
-    applyAddContact(newContact);
+    addContact(newContact);
     reset();
   };
 

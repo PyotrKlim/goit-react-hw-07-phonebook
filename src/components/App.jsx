@@ -5,11 +5,11 @@ import FilterContacts from './FilterContacts/FilterContacts';
 import { useContacts } from 'redux/useContacts';
 
 export default function App() {
-  const { contacts, applyGetContacts } = useContacts();
+  const { contacts, getContacts } = useContacts();
 
   useEffect(() => {
-    applyGetContacts();
-  }, [applyGetContacts]);
+    getContacts();
+  }, [getContacts]);
 
   return (
     <>

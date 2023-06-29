@@ -3,10 +3,10 @@ import PropTypes from 'prop-types';
 import { useContacts } from 'redux/useContacts';
 
 export const ContactsItem = ({ name, number, id }) => {
-  const { applyDeleteContact } = useContacts();
+  const { deleteContact } = useContacts();
 
   const onClick = () => {
-    applyDeleteContact(id);
+    deleteContact(id);
   };
 
   return (
