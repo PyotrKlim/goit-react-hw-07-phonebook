@@ -2,7 +2,7 @@ import { useState } from 'react';
 import css from './ContactForm.module.css';
 import { nanoid } from '@reduxjs/toolkit';
 import { useContacts } from 'redux/useContacts';
-
+// проверка повторного пуша комита
 export default function ContactForm() {
   const { contacts, applyAddContact } = useContacts();
 
